@@ -3,7 +3,7 @@ package com.padc.homework.housebuyingandrentingpoc.utils;
 public class EventsConstants {
 
     //URLs
-    public static final String BASE_URL = "https://38f82833-b236-4568-b7b9-f2d75f6c90b1.mock.pstmn.io";
+    public static final String BASE_URL = "https://bd2ee98e-d607-4ee1-baa5-d18d0c9325b6.mock.pstmn.io";
     public static final String GET_EVENTS = "/getAllEvents";
     public static final String GET_HOUSES = "/getAllHouses";
     public static final String LOGIN = "/login";

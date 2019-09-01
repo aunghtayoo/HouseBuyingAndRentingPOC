@@ -45,6 +45,7 @@
                 android:background="@drawable/edit_text_design"
                 android:drawableLeft="@drawable/ic_search_black_24dp"
                 android:paddingLeft="@dimen/margin_small"
+                android:focusable="false"
                 android:hint="Type your search address"
                 android:id="@+id/text_search"/>
 

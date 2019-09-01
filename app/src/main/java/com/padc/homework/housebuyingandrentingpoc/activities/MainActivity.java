@@ -13,13 +13,15 @@ import com.padc.homework.housebuyingandrentingpoc.fragments.ForYouFragment;
 public class MainActivity extends BaseActivity implements HouseItemDelegate {
 
     BottomNavigationView bottomNavView;
+    private static MainActivity objInstance;
 
     private static MainActivity getObjInstance(){
-        return new MainActivity();
+        objInstance = new MainActivity();
+        return objInstance;
     }
 
-    private static Intent newIntent(){
-        Intent intent = new Intent(getObjInstance(), DetailActivity.class);
+    private Intent newIntent(){
+        Intent intent = new Intent(getApplicationContext(), DetailActivity.class);
         return intent;
     }
 
