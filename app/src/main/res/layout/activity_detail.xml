@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".activities.DetailActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitStart"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/west_minster_hotel_london"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:weightSum="10"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:layout_marginRight="@dimen/margin_medium"
+            android:id="@+id/layout_search"
+            android:gravity="center_vertical"
+            android:layout_alignParentTop="true"
+            android:padding="@dimen/margin_medium">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/ic_keyboard_arrow_left_black_24dp"
+                android:layout_alignParentRight="true"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="9"
+                android:textSize="@dimen/text_regular"
+                android:inputType="text"
+                android:textColor="@color/color_dark"
+                android:background="@drawable/edit_text_design"
+                android:drawableLeft="@drawable/ic_search_black_24dp"
+                android:paddingLeft="@dimen/margin_small"
+                android:hint="Type your search address"
+                android:id="@+id/text_search"/>
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/layout_search">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="320dp"
+                    android:id="@+id/card_view"
+                    android:layout_marginTop="64dp"
+                    android:layout_marginLeft="@dimen/margin_xlarge"
+                    android:layout_marginBottom="@dimen/margin_xlarge"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="@dimen/margin_medium"
+                    android:layout_centerHorizontal="true">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/margin_medium_2">
+
+                        <org.mmtextview.components.MMTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="?attr/actionBarSize"
+                            android:id="@+id/text_price_detail"
+                            android:text="$ 12,000"
+                            android:textStyle="bold"
+                            android:gravity="center_vertical"
+                            android:layout_alignParentTop="true"
+                            android:textColor="@color/color_dark"
+                            android:textSize="@dimen/text_regular_3x"/>
+
+                        <android.support.design.widget.FloatingActionButton
+                            android:id="@+id/fab_nav"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:rotation="@android:integer/config_mediumAnimTime"
+                            android:src="@drawable/ic_navigation_black_24dp"/>
+
+                        <ImageView
+                            android:layout_width="@dimen/item_ic_dimen"
+                            android:layout_height="@dimen/item_ic_dimen"
+                            android:layout_marginTop="@dimen/margin_medium_3"
+                            android:layout_below="@+id/text_price_detail"
+                            android:src="@drawable/place_holder"
+                            android:padding="@dimen/margin_small"
+                            android:id="@+id/ic_loc_detail"/>
+
+                        <org.mmtextview.components.MMTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/item_ic_dimen"
+                            android:layout_toEndOf="@+id/ic_loc_detail"
+                            android:layout_marginLeft="@dimen/margin_medium"
+                            android:layout_marginTop="@dimen/margin_medium_3"
+                            android:text="West minister, London"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/text_regular"
+                            android:gravity="center_vertical"
+                            android:id="@+id/text_location"
+                            android:layout_below="@+id/text_price_detail"/>
+
+                        <ImageView
+                            android:layout_width="@dimen/item_ic_dimen"
+                            android:layout_height="@dimen/item_ic_dimen"
+                            android:layout_marginTop="@dimen/margin_medium_2"
+                            android:layout_below="@+id/ic_loc_detail"
+                            android:src="@drawable/square_feet"
+                            android:padding="@dimen/margin_small"
+                            android:id="@+id/ic_room_detail"/>
+
+                        <org.mmtextview.components.MMTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/item_ic_dimen"
+                            android:layout_toEndOf="@+id/ic_loc_detail"
+                            android:layout_marginLeft="@dimen/margin_medium"
+                            android:layout_marginTop="@dimen/margin_medium_2"
+                            android:text="3200 sqft"
+                            android:id="@+id/text_sqft"
+                            android:gravity="center_vertical"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/text_regular"
+                            android:layout_below="@+id/text_location"/>
+
+                        <ImageView
+                            android:layout_width="@dimen/item_ic_dimen"
+                            android:layout_height="@dimen/item_ic_dimen"
+                            android:layout_marginTop="@dimen/margin_medium_2"
+                            android:layout_below="@+id/ic_room_detail"
+                            android:src="@drawable/ic_favorite_border_black_24dp"
+                            android:padding="@dimen/margin_tiny"
+                            android:id="@+id/ic_fav"/>
+
+                        <org.mmtextview.components.MMTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/item_ic_dimen"
+                            android:layout_toEndOf="@+id/ic_fav"
+                            android:layout_marginLeft="@dimen/margin_medium"
+                            android:layout_marginTop="@dimen/margin_medium_2"
+                            android:text="3200 sqft"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/text_regular"
+                            android:gravity="center_vertical"
+                            android:layout_below="@+id/text_sqft"/>
+
+                        <ImageView
+                            android:layout_width="@dimen/item_ic_dimen"
+                            android:layout_height="@dimen/item_ic_dimen"
+                            android:layout_marginTop="@dimen/margin_medium_2"
+                            android:layout_marginLeft="@dimen/margin_large_x4"
+                            android:layout_below="@+id/ic_loc_detail"
+                            android:layout_toEndOf="@+id/ic_room_detail"
+                            android:src="@drawable/bed"
+                            android:padding="@dimen/margin_small"
+                            android:id="@+id/ic_bed_detail"/>
+
+                        <org.mmtextview.components.MMTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/item_ic_dimen"
+                            android:layout_toEndOf="@+id/ic_bed_detail"
+                            android:layout_marginLeft="@dimen/margin_medium"
+                            android:layout_marginTop="@dimen/margin_medium_2"
+                            android:text="4 bedrooms"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/text_regular"
+                            android:id="@+id/text_bed_detail"
+                            android:gravity="center_vertical"
+                            android:layout_below="@+id/text_location"/>
+
+                        <ImageView
+                            android:layout_width="@dimen/item_ic_dimen"
+                            android:layout_height="@dimen/item_ic_dimen"
+                            android:layout_marginTop="@dimen/margin_medium_2"
+                            android:layout_marginLeft="@dimen/margin_large_x4"
+                            android:layout_below="@+id/ic_bed_detail"
+                            android:layout_toEndOf="@+id/ic_fav"
+                            android:src="@drawable/ic_edit_black_24dp"
+                            android:padding="@dimen/margin_tiny"
+                            android:id="@+id/ic_reserve"/>
+
+                        <org.mmtextview.components.MMTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/item_ic_dimen"
+                            android:layout_toEndOf="@+id/ic_bed_detail"
+                            android:layout_marginLeft="@dimen/margin_medium"
+                            android:layout_marginTop="@dimen/margin_medium_2"
+                            android:text="23 reserves"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/text_regular"
+                            android:id="@+id/text_reserve"
+                            android:gravity="center_vertical"
+                            android:layout_below="@+id/text_sqft"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:id="@+id/hr_line"
+                            android:layout_marginTop="@dimen/margin_medium_2"
+                            android:layout_below="@+id/text_reserve"
+                            android:background="@color/color_shade"/>
+
+                        <org.mmtextview.components.MMTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="?attr/actionBarSize"
+                            android:textSize="@dimen/text_regular"
+                            android:text="See Review"
+                            android:gravity="center_vertical"
+                            android:layout_marginTop="@dimen/margin_medium_2"
+                            android:textColor="@color/color_dark"
+                            android:layout_below="@+id/hr_line"/>
+
+                        <android.support.design.button.MaterialButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="?attr/actionBarSize"
+                            android:layout_below="@+id/hr_line"
+                            android:text="See Photos"
+                            android:textAllCaps="false"
+                            android:layout_marginTop="@dimen/margin_medium_2"
+                            app:backgroundTint="@color/color_bg"
+                            app:strokeColor="@color/design_default_color_primary"
+                            app:strokeWidth="1dp"
+                            android:textColor="@color/design_default_color_primary"
+                            app:cornerRadius="@dimen/margin_medium_3"
+                            android:background="@drawable/button_border_design"
+                            android:layout_alignParentRight="true"/>
+
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <org.mmtextview.components.MMTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/card_view"
+                    android:layout_marginLeft="@dimen/margin_medium_2"
+                    android:layout_marginRight="@dimen/margin_medium_2"
+                    android:textColor="@color/color_dark"
+                    android:textSize="@dimen/text_regular"
+                    android:id="@+id/lbl_title"
+                    android:text="Single Family House"/>
+
+
+                <org.mmtextview.components.MMTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lbl_title"
+                    android:layout_marginTop="@dimen/margin_medium_2"
+                    android:layout_marginLeft="@dimen/margin_medium_2"
+                    android:layout_marginRight="@dimen/margin_medium_2"
+                    android:text="@string/text_house_desc"/>
+            </RelativeLayout>
+
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:layout_marginBottom="@dimen/margin_large">
+
+            <android.support.design.button.MaterialButton
+                android:layout_width="160dp"
+                android:layout_height="match_parent"
+                android:id="@+id/btn_add_favourite"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:textAllCaps="false"
+                android:textColor="@color/color_dark"
+                app:backgroundTint="@color/color_bg"
+                android:elevation="@dimen/margin_small"
+                app:cornerRadius="@dimen/margin_medium_3"
+                android:text="Add Favourites"/>
+
+            <android.support.design.button.MaterialButton
+                android:layout_width="160dp"
+                android:layout_height="match_parent"
+                android:textAllCaps="false"
+                android:text="Book Now"
+                app:cornerRadius="@dimen/margin_medium_3"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:id="@+id/btn_book_now"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

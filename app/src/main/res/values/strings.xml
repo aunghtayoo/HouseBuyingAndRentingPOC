@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">HouseBuyingAndRentingPOC</string>
+    <string name="text_house_desc">House Descriptions.</string>
+</resources>
