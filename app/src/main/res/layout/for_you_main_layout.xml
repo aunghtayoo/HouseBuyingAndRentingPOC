@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="@dimen/margin_medium_2"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <android.support.design.widget.AppBarLayout
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:theme="@style/AppTheme.AppBarOverlay"
         android:elevation="@dimen/margin_zero"
         app:elevation="@dimen/margin_zero">
-
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -24,53 +23,58 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="9"
-                android:focusable="false"
                 android:textSize="@dimen/text_regular"
                 android:inputType="text"
+                android:focusedByDefault="false"
                 android:textColor="@color/color_dark"
                 android:background="@drawable/edit_text_design"
                 android:drawableLeft="@drawable/ic_search_black_24dp"
                 android:paddingLeft="@dimen/margin_small"
                 android:hint="Type your search address"
-                android:id="@+id/text_search"/>
+                android:id="@+id/text_search_address"/>
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:src="@drawable/ic_pause_black_24dp"
+                android:clickable="true"
+                android:id="@+id/ic_search"
+                android:src="@drawable/ic_search_black_24dp"
                 android:layout_alignParentRight="true"/>
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:src="@drawable/ic_pause_black_24dp"
+                android:id="@+id/ic_linearly"
+                android:clickable="true"
+                android:src="@drawable/ic_menu_black_24dp"
                 android:layout_alignParentRight="true"/>
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:id="@+id/ic_grid"
+                android:clickable="true"
                 android:src="@drawable/ic_pause_black_24dp"
                 android:layout_alignParentRight="true"/>
-
 
         </LinearLayout>
 
-    </android.support.design.widget.AppBarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behavior="android.support.design.widget.AppBarLayout$ScrollingViewBehavior">
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
 
-        <android.support.design.widget.TabLayout
+        <com.google.android.material.tabs.TabLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/tab_layout_for_you"/>
 
-        <android.support.v4.view.ViewPager
+        <androidx.viewpager.widget.ViewPager
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/view_pager"
@@ -78,4 +82,4 @@
 
     </RelativeLayout>
 
-</android.support.design.widget.CoordinatorLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

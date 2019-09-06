@@ -5,6 +5,7 @@ import com.padc.homework.housebuyingandrentingpoc.data.vos.HouseInfoVO;
 import java.util.List;
 
 public interface GetHousesDataAgent {
+
     void getHouses(GetEventsFromNetworkDelegate delegate);
 
     interface GetEventsFromNetworkDelegate{

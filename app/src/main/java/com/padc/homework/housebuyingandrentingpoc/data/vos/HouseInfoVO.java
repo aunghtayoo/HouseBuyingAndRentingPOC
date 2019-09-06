@@ -1,26 +1,51 @@
 package com.padc.homework.housebuyingandrentingpoc.data.vos;
 
-import java.math.BigDecimal;
+import com.google.gson.annotations.SerializedName;
 
 public class HouseInfoVO {
 
-    /*private String houseImageUrl;
-    private String name;
-    private String description;
-    private int price;
-    private String address;
-    private int squareFeet;
-    private double latitude;
-    private double longitude;*/
+    @SerializedName("id")
+    private int id;
 
-    private String house_image_url;
+    @SerializedName("house_image_url")
+    private String houseImageUrl;
+
+    @SerializedName("name")
     private String name;
+
+    @SerializedName("description")
     private String description;
-    private double price;
+
+    @SerializedName("price")
+    private long price;
+
+    @SerializedName("address")
     private String address;
-    private int square_feet;
+
+    @SerializedName("square_feet")
+    private int squareFeet;
+
+    @SerializedName("latitude")
     private double latitude;
+
+    @SerializedName("longitude")
     private double longitude;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getHouseImageUrl() {
+        return houseImageUrl;
+    }
+
+    public void setHouseImageUrl(String houseImageUrl) {
+        this.houseImageUrl = houseImageUrl;
+    }
 
     public String getName() {
         return name;
@@ -38,11 +63,11 @@ public class HouseInfoVO {
         this.description = description;
     }
 
-    public double getPrice() {
+    public long getPrice() {
         return price;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(long price) {
         this.price = price;
     }
 
@@ -52,6 +77,14 @@ public class HouseInfoVO {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    public int getSquareFeet() {
+        return squareFeet;
+    }
+
+    public void setSquareFeet(int squareFeet) {
+        this.squareFeet = squareFeet;
     }
 
     public double getLatitude() {
@@ -68,21 +101,5 @@ public class HouseInfoVO {
 
     public void setLongitude(double longitude) {
         this.longitude = longitude;
-    }
-
-    public String getHouse_image_url() {
-        return house_image_url;
-    }
-
-    public void setHouse_image_url(String house_image_url) {
-        this.house_image_url = house_image_url;
-    }
-
-    public int getSquare_feet() {
-        return square_feet;
-    }
-
-    public void setSquare_feet(int square_feet) {
-        this.square_feet = square_feet;
     }
 }

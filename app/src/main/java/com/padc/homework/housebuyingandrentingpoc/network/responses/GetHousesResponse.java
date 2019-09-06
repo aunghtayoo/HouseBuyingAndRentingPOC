@@ -1,13 +1,19 @@
 package com.padc.homework.housebuyingandrentingpoc.network.responses;
 
+import com.google.gson.annotations.SerializedName;
 import com.padc.homework.housebuyingandrentingpoc.data.vos.HouseInfoVO;
 
 import java.util.List;
 
 public class GetHousesResponse{
 
+    @SerializedName("code")
     private int code;
+
+    @SerializedName("message")
     private String message;
+
+    @SerializedName("data")
     private List<HouseInfoVO> data;
 
     public int getCode() {

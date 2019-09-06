@@ -1,4 +1,6 @@
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">HouseBuyingAndRentingPOC</string>
     <string name="text_house_desc">House Descriptions.</string>
+    <string name="price_format">Ks ###,###</string>
+    <string name="square_feet_format"><xliff:g id="sqft">%1$d sqft</xliff:g></string>
 </resources>

@@ -3,7 +3,6 @@ package com.padc.homework.housebuyingandrentingpoc.network.dataagents;
 import android.os.AsyncTask;
 
 import com.google.gson.Gson;
-import com.padc.homework.housebuyingandrentingpoc.data.vos.HouseInfoVO;
 import com.padc.homework.housebuyingandrentingpoc.network.responses.GetHousesResponse;
 import com.padc.homework.housebuyingandrentingpoc.utils.EventsConstants;
 
@@ -15,18 +14,17 @@ import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.util.List;
 
-public class GetHousesDataAgentImpl implements GetHousesDataAgent{
+public class GetHousesHttpConnectionDataAgentImpl implements GetHousesDataAgent{
 
-    private static GetHousesDataAgentImpl mGetHousesDataAgent;
+    private static GetHousesHttpConnectionDataAgentImpl mGetHousesDataAgent;
     private GetEventsFromNetworkDelegate mGetEventsFromNetworkDelegate;
 
-    private GetHousesDataAgentImpl(){ }
+    private GetHousesHttpConnectionDataAgentImpl(){ }
 
-    public static GetHousesDataAgentImpl getObjInstance(){
+    public static GetHousesHttpConnectionDataAgentImpl getObjInstance(){
         if(mGetHousesDataAgent == null){
-            mGetHousesDataAgent = new GetHousesDataAgentImpl();
+            mGetHousesDataAgent = new GetHousesHttpConnectionDataAgentImpl();
         }
         return mGetHousesDataAgent;
     }
